@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Videos App </ion-title>
+    <ion-title> {{ titulo }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,22 +14,24 @@
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let filme of listaVideos">
       <ion-item lines="full">
         <ion-thumbnail slot="start">
           <img
-            src="https://m.media-amazon.com/images/M/MV5BMjI0MDMzNTQ0M15BMl5BanBnXkFtZTgwMTM5NzM3NDM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            [src]="filme.cartaz"
           />
         </ion-thumbnail>
 
         <ion-label class="ion-text-wrap">
-          <h1>Um Lugar Silencioso (2018)</h1>
-          <p>05/04/2018 (BR) - 1h 30min</p>
-          <p>Drama, Horror, Sci-Fi</p>
+          <div>
+            <h1>{{ filme.nome }}</h1>
+            <p> {{ filme.lancamento }} - {{ filme.duracao }}</p>
+            <ion-badge color="light" *ngFor="let genero of filme.generos">{{ genero }}</ion-badge>
+          </div>
         </ion-label>
 
         <ion-chip color="success" outline>
-          <ion-label>75%</ion-label>
+          <ion-label>{{ filme.classificacao }}</ion-label>
         </ion-chip>
       </ion-item>
 
@@ -38,34 +40,6 @@
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
-
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-        <ion-thumbnail slot="start">
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BMTUyNzkwMzAxOF5BMl5BanBnXkFtZTgwMzc1OTk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
-          />
-        </ion-thumbnail>
-
-        <ion-label class="ion-text-wrap">
-          <h1>A Bruxa (2015)</h1>
-          <p>03/03/2016 (BR) - 1h 32min</p>
-          <p>Drama, Horror, Mistery</p>
-        </ion-label>
-
-        <ion-chip color="success" outline>
-          <ion-label>69%</ion-label>
-        </ion-chip>
-      </ion-item>
-
-      <ion-item-options side="end">
-        <ion-item-option color="gold" (click)="exibirAlertaFavorito()">
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-
     </ion-item-sliding>
   </ion-list>
 </ion-content>
