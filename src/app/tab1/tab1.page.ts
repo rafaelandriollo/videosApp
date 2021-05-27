@@ -33,6 +33,33 @@ export class Tab1Page {
       cartaz: 'https://m.media-amazon.com/images/M/MV5BMTUyNzkwMzAxOF5BMl5BanBnXkFtZTgwMzc1OTk1NjE@._V1_UX182_CR0,0,182,268_AL_.jpg',
       generos: ['Drama', 'Horror', 'Mistery'],
       pagina: '/the-witch'
+    },
+    {
+      nome: 'A Mulher na Janela (2021)',
+      lancamento: '14 May 2021 (Brazil)',
+      duracao: '1h 40min',
+      classificacao: 57,
+      cartaz: 'http://conteudo.imguol.com.br/c/splash/55/2021/05/14/poster-do-filme-a-mulher-na-janela-da-netflix-1621021532233_v2_3x4.jpg',
+      generos: ['Crime', 'Drama', 'Mystery'],
+      pagina: '/the-woman-in-the-window'
+    },
+    {
+      nome: 'Mortal Kombat (2021)',
+      lancamento: '20 May 2021 (Brazil)',
+      duracao: '1h 50min',
+      classificacao: 62,
+      cartaz: 'https://br.web.img3.acsta.net/pictures/21/03/31/18/22/5366148.png',
+      generos: ['Action', 'Adventure', 'Fantasy'],
+      pagina: '/mortal-kombat'
+    },
+    {
+      nome: 'Oxigênio (2021)',
+      lancamento: '12 May 2021 (Brazil)',
+      duracao: '1h 40min',
+      classificacao: 65,
+      cartaz: 'https://deadline.com/wp-content/uploads/2021/05/OXYGEN_Vertical_RGB_FR.jpg',
+      generos: ['Drama', 'Horror', 'Mistery'],
+      pagina: '/oxigene'
     }
   ];
 
